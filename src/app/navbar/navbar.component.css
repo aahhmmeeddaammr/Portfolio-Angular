@@ -1,22 +1,19 @@
-.home{
-  min-height: 90vh;
-}
 .active{
   position: relative;
+  color: rgb(60, 255, 0) !important;
 }
 .active::after{
   content:'';
-  background-color: black;
-  height: 3px;
+  background-color: rgb(60, 255, 0);
+  height: 2px;
   width: 0%;
   position: absolute;
   bottom: 0;
   left: 0;
   animation-name: TransActive;
-  animation-duration: 2s;
-  animation-fill-mode:forwards ;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
 }
-
 @keyframes TransActive {
   to{
     width: 100%;

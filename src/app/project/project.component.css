@@ -1,0 +1,7 @@
+.layer{
+  top: 100%;
+  transition: all 1s;
+}
+.parent:hover .layer{
+  top: 0;
+}

@@ -1,0 +1,14 @@
+<div class="bg-black">
+  <div class="container py-3">
+    <div class="row g-3">
+
+      @for(item of myProjects; track $index){
+        <div class="col-md-4">
+          <app-project [projectdata]="item"></app-project>
+        </div>
+      }
+    </div>
+  </div>
+</div>
+
+

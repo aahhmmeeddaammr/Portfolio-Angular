@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap');
+
+
+.text , .text2 , .Name{
+  -webkit-text-stroke: 0.01vw white ;
+  text-transform: uppercase;
+  position: relative;
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+}
+
+.text::before{
+  content: attr(data-text);
+  width: 0;
+  height: 100%;
+  color: white;
+  position: absolute;
+  overflow: hidden;
+  animation-name: Trans;
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+.text2::before{
+  content: attr(data-text);
+  width: 0;
+  height: 100%;
+  color: rgba(255, 255, 255, 0.966);
+  position: absolute;
+  overflow: hidden;
+  animation-name: Trans;
+  animation-fill-mode: forwards;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+@keyframes Trans {
+  from{
+    width: 0;
+  }
+  to{
+      width: 100%;
+  }
+}
+.Name{
+  color: rgb(60, 255, 0);
+}
+
+
+.tech-icon {
+  width: 40px;
+  height: 80px;
+  margin-bottom: 10px;
+  filter: invert(50%); /* To adjust the color of the SVGs */
+}
+
+.After::after{
+  content: ".";
+  color: rgb(60, 255, 0);
+  font-size: 100px;
+}
+@media (max-width:748px) {
+  .text , .text2 , .Name{
+    font-size: 2rem;
+  }
+  .text , .text2 {
+    color: white;
+
+  }
+  .text::before , .text2::before{
+   opacity: 0;
+  }
+}
